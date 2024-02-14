@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보</title>
+
+    <style>
+        .kt {
+            margin-top: 100px;
+            text-align: center;
+        }
+        .mybtn {
+            margin-top: 400px;
+            text-align: center;
+        }
+
+        .button1 {
+            width: 100px;
+            height: 50px;
+        }
+
+        .button2 {
+            width: 100px;
+            height: 50px;
+        }
+
+        .button3 {
+            width: 100px;
+            height: 50px;
+        }
+        .rs {
+            
+        }
+        
+
+    </style>
+    <script>
+        
+        function redirectToOtherWebsite() {
+            // 새로운 URL로 이동
+            window.location.href = 'https://www.example.com';
+        }
+
+        function playgame(myc) {
+            const choices = ['가위', '바위', '보'];
+            const comc =
+                choices[Math.floor(Math.random() * 3)];
+
+        let result;
+
+        if (myc === comc) {
+            result = "비겼습니다";
+        } else if (
+            (myc === '가위' && comc === '보') ||
+            (myc === '바위' && comc === '가위') ||
+            (myc === '보' && comc === '바위')
+        ) {
+            result = "당신이 이겼습니다!";
+        } else {
+            result = "컴퓨터가 이겼습니다!";
+        }
+        var element =
+        document.getElementById('result').innerText = `당신의 선택: ${myc}\n컴퓨터의 선택: ${comc}\n결과: ${result}`;
+    }
+        
+    </script>
+</head>
+
+<body>
+
+    <div class="kt">
+        <button onclick="redirectToOtherWebsite()">다른 웹사이트로 이동</button>
+    </div>
+
+    <div class="mybtn">
+        <button onclick="playgame('가위')" class="button1" type="button" class="btn btn-primary">가위</button>
+        <button onclick="playgame('바위')" class="button2" type="button" class="btn btn-primary">바위</button>
+        <button onclick="playgame('보')" class="button3" type="button" class="btn btn-primary">보</button>
+    </div>
+
+    <div class="rs" id="result"></div>
+    
+    
+</body>
+
+</html>
