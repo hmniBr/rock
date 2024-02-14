@@ -11,6 +11,7 @@
             margin-top: 100px;
             text-align: center;
         }
+
         .mybtn {
             margin-top: 400px;
             text-align: center;
@@ -30,17 +31,14 @@
             width: 100px;
             height: 50px;
         }
-        .rs {
-            
-        }
-        
 
+        .rs {}
     </style>
     <script>
-        
+
         function redirectToOtherWebsite() {
             // 새로운 URL로 이동
-            window.location.href = 'https://www.example.com';
+            window.location.href = '';
         }
 
         function playgame(myc) {
@@ -48,23 +46,23 @@
             const comc =
                 choices[Math.floor(Math.random() * 3)];
 
-        let result;
+            let result;
 
-        if (myc === comc) {
-            result = "비겼습니다";
-        } else if (
-            (myc === '가위' && comc === '보') ||
-            (myc === '바위' && comc === '가위') ||
-            (myc === '보' && comc === '바위')
-        ) {
-            result = "당신이 이겼습니다!";
-        } else {
-            result = "컴퓨터가 이겼습니다!";
+            if (myc === comc) {
+                result = "비겼습니다";
+            } else if (
+                (myc === '가위' && comc === '보') ||
+                (myc === '바위' && comc === '가위') ||
+                (myc === '보' && comc === '바위')
+            ) {
+                result = "당신이 이겼습니다!";
+            } else {
+                result = "컴퓨터가 이겼습니다!";
+            }
+            var element =
+                document.getElementById('result').innerText = `당신의 선택: ${myc}\n컴퓨터의 선택: ${comc}\n결과: ${result}`;
         }
-        var element =
-        document.getElementById('result').innerText = `당신의 선택: ${myc}\n컴퓨터의 선택: ${comc}\n결과: ${result}`;
-    }
-        
+
     </script>
 </head>
 
@@ -81,8 +79,8 @@
     </div>
 
     <div class="rs" id="result"></div>
-    
-    
+
+
 </body>
 
 </html>
