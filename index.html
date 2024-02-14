@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>가위바위보</title>
 
     <style>
         .kt {
+            border-radius: 20px;
             margin-top: 100px;
             text-align: center;
         }
@@ -18,21 +21,23 @@
         }
 
         .button1 {
+            border-radius: 20px;
             width: 100px;
             height: 50px;
         }
 
         .button2 {
+            border-radius: 20px;
             width: 100px;
             height: 50px;
         }
 
         .button3 {
+            border-radius: 20px;
             width: 100px;
             height: 50px;
         }
 
-        .rs {}
     </style>
     <script>
 
@@ -69,13 +74,13 @@
 <body>
 
     <div class="kt">
-        <button onclick="redirectToOtherWebsite()">다른 웹사이트로 이동</button>
+        <button onclick="redirectToOtherWebsite()" type="button" class="btn btn-primary">다른 웹사이트로 이동</button>
     </div>
 
     <div class="mybtn">
-        <button onclick="playgame('가위')" class="button1" type="button" class="btn btn-primary">가위</button>
-        <button onclick="playgame('바위')" class="button2" type="button" class="btn btn-primary">바위</button>
-        <button onclick="playgame('보')" class="button3" type="button" class="btn btn-primary">보</button>
+        <button onclick="playgame('가위')" type="button" class="btn btn-primary">가위</button>
+        <button onclick="playgame('바위')" type="button" class="btn btn-primary">바위</button>
+        <button onclick="playgame('보')" type="button" class="btn btn-primary">보</button>
     </div>
 
     <div class="rs" id="result"></div>
